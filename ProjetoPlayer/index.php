@@ -4,8 +4,7 @@ require_once ('classes/Ataque.php');
 require_once ('classes/Defesa.php');
 require_once ('classes/Magia.php');
 
-
-$player = new Player("Forreλner", 1);
+$player = new Player("Forreλner");
 
 
 $itemAtaque1 = new Ataque("Espada", 7, "Ataque");
@@ -14,9 +13,10 @@ $itemMagia1 = new Magia("Vara", 2, "Magia");
 
 
 echo "Coletando itens para {$player->getNickname()}:<br>";
-$player->coletarItem($itemAtaque1);
-$player->coletarItem($itemDefesa1);
-$player->coletarItem($itemMagia1);
+$player->coletarItem($itemAtaque1); 
+$player->coletarItem($itemDefesa1); 
+$player->coletarItem($itemMagia1);  
+$player->soltarItem(0);
 echo "<br>";
 
 
@@ -30,7 +30,11 @@ $player->subirNivel();
 echo "Novo nível: " . $player->getNivel() . "<br>";
 echo "Nova capacidade do inventário: " . $player->getInventario()->getCapacidadeMaxima() . "<br>";
 echo "<br>";
+
 ?>
+
+
+
 
 
 
